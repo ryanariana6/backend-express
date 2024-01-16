@@ -1,0 +1,103 @@
+// Create a Admin
+POST http://localhost:5000/admins 
+Content-Type: application/json
+
+{
+    "name": "Mas",
+    "email": "nawawi@gmail.com",
+    "password": "123456",
+    "confPassword":"123456",
+    "role": "user"
+}
+
+###
+//get all admin
+GET http://localhost:5000/admins
+
+###
+//Get single admin
+GET http://localhost:5000/admins/3e9f23dd-0d5d-4875-9d1e-f001e03777a3
+
+###
+// Update admin
+PATCH  http://localhost:5000/admins/52194826-c0d8-400b-8c05-732704ccd052
+Content-Type: application/json
+
+{
+    "name": "Mas Muhammad Ganteng",
+    "email": "nawawi@gmail.com",
+    "password": "123456",
+    "confPassword":"123456" ,
+    "role": "user"
+}
+
+###
+// Delete admin
+DELETE http://localhost:5000/admins/3e9f23dd-0d5d-4875-9d1e-f001e03777a3
+
+
+###
+//login admin
+POST http://localhost:5000/login 
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123456"
+}
+
+###
+//login
+POST http://localhost:5000/login 
+Content-Type: application/json
+
+{
+    "email": "nawawi@gmail.com",
+    "password": "123456"
+}
+
+###
+// meee
+GET http://localhost:5000/me
+
+###
+// logout admin
+DELETE http://localhost:5000/logout
+
+
+
+###
+///// about test
+
+POST http://localhost:5000/abouts
+Content-Type: application/json
+
+{
+    "history": "ini history user 2",
+    "vision": "ini vision user 2",
+    "mision": "ini mision user 2",
+    "values": "ini values user 2"
+}
+
+###
+//get all about
+GET http://localhost:5000/abouts
+
+###
+//Get single about
+GET http://localhost:5000/abouts/e811b140-1a35-4824-ab5c-6a0c148e3764
+###
+// Update about
+PATCH  http://localhost:5000/abouts/e811b140-1a35-4824-ab5c-6a0c148e3764
+Content-Type: application/json
+
+{
+    "history": "ini history update",
+    "vision": "ini vision update",
+    "mision": "ini mision update",
+    "values": "ini values update" 
+}
+
+###
+// Delete about
+DELETE http://localhost:5000/abouts/b6b5d22d-1466-40be-bf27-2c2731d8a2f3
