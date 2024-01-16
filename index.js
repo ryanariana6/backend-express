@@ -12,6 +12,7 @@ const AboutRoute = require('./routes/AboutRoute.js');
 const ServiceRoute = require('./routes/LayananRoute.js');
 const HeroRoute = require('./routes/HeroRoute.js');
 const AuthRoute = require('./routes/AuthRoute.js');
+const serverless = require('serverless-http');
 dotenv.config();
 
 const app = express();
@@ -65,3 +66,4 @@ app.get('/*', (req, res) => {
 app.listen(process.env.APP_PORT,()=>{
     console.log("server BACKEND up and running...");
 });
+module.exports.handler = serverless(app);
